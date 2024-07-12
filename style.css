@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+/*resetando os estilos*/
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  color: #222;
+}
+
+/*tirando o estilo das ul*/
+ul {
+  list-style: none;
+}
+/*tirando a decoração dos links*/
+
+a {
+  text-decoration: none;
+}
+/*deixando em bloco as imagens no máximo de largura 100% não deixa estourar*/
+img {
+  display: block;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*Iniciando no topo da página .superinfo-br e .superinfo
+cria cor de fundo azul e faz a estilização da class .superinfo e suas tags 
+*/
+.superinfor-bg {
+  background: #122ab2;
+  color: white;
+}
+
+/*colocando cor no link da tag a*/
+.superinfor-bg a {
+  color: white;
+}
+
+.superinfo {
+  max-width: 960px;
+  margin: 0 auto; /*pra cima e pra baixo 0px e direita e esquerda automática*/
+  display: flex; /*alinhando lado a lado todos os elementos dentro do pai .superinfo*/
+  justify-content: space-between; /*espaçamento entre os elementos*/
+  flex-wrap: wrap; /*ao diminuir a página os elementos quebram para baixo*/
+  padding-top: 10px; /*espaçamento interno ao topo*/
+}
+
+/*colocando margin nas tags do pai .superinfo p, a*/
+.superinfo a,
+.superinfo p {
+  margin: 0 10px 10px 10px; /*espaçamento externo 0 pra cima - 10px direita - 10px baixo - 10px esquerda*/
+}
+
+/*Finalizando no topo da página .superinfo-br e .superinfo*/
+
+/*------------Iniciando a parte do menu do topo da página------------*/
+.menu-bg {
+  background: #2c70ff; /*cor de fundo do menu*/
+}
+
+.menu {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 15px 0;
+  display: flex; /*nesse momento só esta com display flex a div filha e nav filha*/
+  flex-wrap: wrap; /*quebra de linha quando diminuir a página*/
+  justify-content: space-between; /*alinhando entre os itens */
+  align-items: center; /*alinhando verticalmente ao centro*/
+}
+
+/*colocando a cor branca apenas nos links tag a*/
+.menu a {
+  color: white;
+}
+
+.menu-logo a{
+    font-size: 2em ;/*32px*/
+    font-weight: bold;
+    margin: 0 10px;/*0 cima e baixo - 10px direita e esquerda*/
+}
+/*alinhando os itens lado a lado e wrap quebra de linha*/
+.menu-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-nav a {
+    font-size: 1.25em;/*20px / 16px = 1.25em*/
+    display: block;/*colocando em bloco*/
+    padding: 10px;
+}
+
+.menu-nav a:hover {
+    color: #122ab2;
+}
+
+/*------------Finalizando a parte do menu do topo da página------------*/
+
+
+/*------------Iniciando a parte do sobre-----------*/
+.introducao {
+    font-size: 3em;/*48px / 16px = 3em*/
+    line-height: 1 ;/*espaço entre as limhas*/
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 10px;/*espaçamento 60px cima e baixo - 10px direita e esquerda*/
+}
+
+.sobre {
+    /*criando uma linha no topo da entre sobre e introdução e depois linha no bottom baixo*/
+    border-top: 2px solid #2c70ff;
+    border-bottom: 2px solid #2c70ff;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: flex;
+    flex-wrap: wrap;/*quebra linha*/
+}
+
+.sobre-info {/*quando diminuir tamanho do site quebra no 300px*/
+    flex: 2 1 300px; /*ocupa o espaço 2vezes a mais*/
+    margin:0 10px;
+}
+
+.sobre-info h1 {
+    font-size: 3em;/*48px / 16px = 3em*/
+    margin-bottom: .5em;/*8px*/
+
+}
+.sobre-info p {
+    font-size: 1.25em;/*20px / 16px = 1.25em*/
+    line-height: 1.4;
+    margin-bottom: 1em;
+    color: #7c7c7c7c;
+}
+
+.sobre-img {
+    flex: 1 1 160px;/*quando diminuir tamanho do site quebra no 160px*/
+    margin: 0 10px;
+}
+
+/*------------Finalizando a parte do sobre-----------*/
+
+/*------------Iniciando a parte dos produtos-----------*/
+.produtos {
+  max-width: 960px;
+  margin: 60px auto;
+}
+
+.produtos h1 {
+  font-size: 3em;
+  margin: 0 10px 60px 10px;
+}
+
+.produtos-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.produtos-item {
+  flex: 1 1 175px;/*quebra quando imagem menor 175px*/
+  margin: 10px;
+}
+
+.produtos-item h2 {
+  font-size: 3em;
+  color: #a4a4a4;
+  background: #f7f7f7;
+  padding: 60px 20px;
+
+}
+
+.purple {
+  border-top: 8px solid #ae81ff;
+}
+
+.pink {
+  border-top: 8px solid #f9265e;
+}
+
+.blue {
+  border-top: 8px solid #66d9eb;
+}
+
+
+/*----------Iniciando a parte do preço----------*/
+.preco {
+  background: #f7f7f7;
+  padding: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;/*alinhando verticalmente no final da linha*/
+}
+
+.preco-item {
+  flex: 1 1 260px;
+  border: 4px solid white;
+  padding: 20px;
+  margin: 10px;
+}
+
+.preco-item h2 {
+  font-size: 3em;
+  color: #a4a4a4;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.preco-item span {
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0 5px 0 ;
+  border-top:4px solid white;
+  border-bottom: 4px solid white;
+  font-size: 3rem;
+
+}
+
+.preco-item sup {
+  font-size: 1.5rem;
+}
+
+.preco-item ul {
+  max-width: 300px;
+  margin: 20px 0;
+  font-size: 1.25rem;
+  
+  font-style: italic;
+  color: #7c7c7c7c;
+}
+
+/*criando uma bolinha na frente dos textos*/
+/*pseudo element*/
+.preco-item li::after {
+  content:'' ;
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: #2c70ff;
+  border-radius: 50%;
+}
+
+/*alinhando a bolinha e o texto*/
+.preco-item li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.preco-item a {
+  max-width: 300px;
+  display: block;
+  margin: 20px auto;
+  border: 4px solid;
+  color: #222;
+  text-transform: uppercase;
+  font-size: 2.25rem;
+  font-weight: bold;
+  padding: 15px 0;
+  text-align: center;
+
+}
+
+@media (max-width: 800px){
+  .preco {
+    padding:0 10px;
+  }
+/*pegando terceiro filho e colocando em primeiro quando diminuir tela reponsiva*/
+  .preco .preco-item:nth-child(3){
+    order: -2;
+  }
+
+  .preco .preco-item:nth-child(2){
+    order: -1;
+  }
+}
+
+
+/*--Iniciando Qualidade--*/
+.qualidade {
+  max-width: 960px;
+  margin:60px auto ;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.qualidade-item {
+  flex: 1 1 300px;
+  margin: 20px 10px;
+}
+
+.qualidade-item h2 {
+  font-size: 2.25rem;
+  color: #a4a4a4;
+  margin-bottom: 20px;
+
+}
+
+/*criando retângulos antes do texto*/
+.qualidade-item h2::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 30px;
+  margin-right: 10px;
+
+}
+
+/*Pintando os retângulos cada três itens ele pinta o item 1 2 e 3*/
+.qualidade-item:nth-of-type(3n+1) h2::before {
+  background: #ae81ff;/*cor de fundo primeiro iten*/
+}
+
+.qualidade-item:nth-of-type(3n+2) h2::before {
+  background: #f9265e;/*cor de fundo segundo iten*/
+}
+
+.qualidade-item:nth-of-type(3n+3) h2::before {
+  background: #66d9eb;/*cor de fundo terceiro iten*/
+}
+
+.qualidade-item p {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: #7c7c7c;
+}
+
+/*-----------Iniciando Newsletter------------*/
+.newsletter {
+  background: #f7f7f7;
+  /*fazendo cálculo para alinhar os elementos pois a estrutura central esta 960px*/
+  padding: 60px calc((100% - 960px)/2);
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.newsletter-info {
+  flex: 1 1 240px;
+  margin: 0 10px;
+}
+
+.newsletter-info h1 {
+  font-size: 3rem;
+  color: #a4a4a4;
+}
+
+.newsletter-info p {
+  font-size: 1.25rem;
+  font-style: italic;
+  max-width: 230px;
+  color: #7c7c7c;
+}
+
+.newsletter-form {
+  flex: 2 1 260px;
+  margin: 0 10px;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  flex: 3 1 200px;
+  font-size: 1,25rem;
+  color: #7c7c7c;
+  font-style: italic;
+  font-family: "Nunito",Arial, Helvetica, sans-serif;
+  border: 4px solid #2c70ff;
+  background: transparent;
+  padding: 10px;
+  margin: 0px;
+  border-radius: 0px;
+}
+.newsletter-form button {
+  flex: 1 1 200px;
+  font-size: 2.25rem;
+  font-weight: bold;
+  font-family: "Nunito",Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  background: #2c70ff;
+  color: white;
+  cursor: pointer;
+  margin: 0px;
+  border: 0px;
+  padding: 15px 10px;
+
+  
+}
+@media (max-width: 600px){
+  .newsletter-form button {
+    font-size: 1.5rem;
+  }
+}
+
+/*---Iniciando Footer---*/
+.footer {
+
+  display: flex;
+  background: #2c70ff;
+  height: 200px;
+  align-items: center;
+}
+
+.footer p {
+  flex: 1;
+  text-align: center;
+  font-size: 2.25rem;
+  color: #122ab2;
+}
